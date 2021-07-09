@@ -1,0 +1,56 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+    <div class="text-center">
+        <h1>Add a new Campground</h1>
+    </div>
+    <div class="col-md-6 offset-3">
+        <form action="/campgrounds" class="validated-form" method="POST" novalidate enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="Campground[title]" required>
+                <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label" for="location">Location:</label>
+                <input class="form-control" type="text" id="location" name="Campground[location]" required>
+                <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label" for="description">Description:</label>
+                <textarea class="form-control" type="text" name="Campground[description]" required></textarea>
+                <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label" for="price">Campground price:</label>
+                <input class="form-control" type="text" id="price" name="Campground[price]" required>
+                <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="form-file custom-file">
+                  <input type="file" class="form-file-input" id="image" name="image" multiple>
+                  <label class="form-file-label" for="image">
+                      <span class="form-file-text custom-file-label">Choose image(s)...</span>
+                      <span class="form-file-button">Browse</span>
+                  </label>
+              </div>
+          </div>
+            
+            <div class="mb-3">            
+                <button class="btn btn-success">Add Campground</button>
+            </div>    
+        </form>
+        <a href="/campgrounds">All Campground</a>
+    </div>
+</div>
